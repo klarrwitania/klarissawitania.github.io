@@ -132,10 +132,10 @@ h2 {
   font-size: 1.8em;
   position: sticky;
   top: 0;
-  background-color: white; /* Add background to ensure it remains visible */
+  background-color: white;
   padding: 20px 0;
   margin: 0;
-  z-index: 5; /* Ensure it stays below the close button */
+  z-index: 5;
 }
 
 p {
@@ -147,7 +147,7 @@ p {
 }
 
 #projects {
-  background-color: #b6dce9; /* to invert back to blue: #b6dce98*/
+  background-color: #b6dce9;
   margin: 0 -0.5em;
   padding-bottom: 2.5em;
 }
@@ -213,7 +213,7 @@ section a:link {
 }
 
 #certifications {
-  background-color: #eed9bd; /* to invert back to peach: #eed9bd*/
+  background-color: #eed9bd;
   margin: 0 -0.5em;
   padding-bottom: 2.5em;
 }
@@ -244,19 +244,19 @@ section a:link {
 }
 
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .modal-content {
   background-color: #fff;
-  margin: 10% auto; /* Center the modal */
+  margin: 10% auto; 
   padding: 0px 30px 30px 30px;
   width: 80%;
   max-width: 500px;
@@ -288,39 +288,39 @@ section a:link {
 }
 
 .modal-image {
-  width: 100%; /* Make image responsive to modal width */
-  max-width: 500px; /* Max width for the image */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  max-width: 500px; 
+  height: auto; 
   display: block;
-  margin: 20px auto; /* Center the image horizontally and give it some space */
+  margin: 20px auto; 
 }
 
 .image-slider {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  overflow: hidden; /* Hide images that are outside of the visible area */
+  overflow: hidden; 
 }
 
 .slides {
-  display: flex; /* Arrange images horizontally */
-  transition: transform 1s ease-in-out; /* Smooth sliding transition */
+  display: flex; 
+  transition: transform 1s ease-in-out;
 }
 
 .slide {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  flex-shrink: 0; /* Prevent images from shrinking */
+  height: auto; 
+  flex-shrink: 0;
 }
 
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #307c91; /* Button color */
-  color: white; /* Text color */
+  background-color: #307c91; 
+  color: white;
   text-align: center;
-  text-decoration: none; /* Remove underline */
-  border-radius: 0.5em; /* Rounded corners */
+  text-decoration: none; 
+  border-radius: 0.5em;
   font-size: 0.9em;
   transition: background-color 0.3s ease; /* Smooth transition for hover */
   font-family: 'Lexend', sans-serif;
@@ -328,7 +328,7 @@ section a:link {
 }
 
 .button:hover {
-  background-color: #1c4651; /* Darker color when hovered */
+  background-color: #1c4651; 
   letter-spacing: 0px;
 }
 
