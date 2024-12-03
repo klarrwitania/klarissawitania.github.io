@@ -47,7 +47,6 @@ li {
   padding-top: 0.7em;
 }
 
-
 #welcome-section{
   height: 100vh;
   width: 100%;
@@ -128,6 +127,17 @@ h3 {
   font-size: 2em;
 }
 
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  position: sticky;
+  top: 0;
+  background-color: white; /* Add background to ensure it remains visible */
+  padding: 20px 0;
+  margin: 0;
+  z-index: 5; /* Ensure it stays below the close button */
+}
+
 p {
   font-family: 'Nunito', serif;
 }
@@ -137,15 +147,15 @@ p {
 }
 
 #projects {
-  background-color: #eed9bd; /* to invert back to blue: #b6dce98*/
+  background-color: #b6dce9; /* to invert back to blue: #b6dce98*/
   margin: 0 -0.5em;
   padding-bottom: 2.5em;
 }
 
 .flexes {
   display: grid;
-  text-align: justify;
-  margin-left: 13em;
+  text-align: center;
+  margin: 0;
 }
 
 @media (max-width: 800px) {
@@ -198,12 +208,12 @@ section a:link {
 
 @media (max-width: 530px) {
   .projects-image {
-    height: 200px;
+    height: 250px;
   }
 }
 
 #certifications {
-  background-color: #b6dce9; /* to invert back to peach: #eed9bd*/
+  background-color: #eed9bd; /* to invert back to peach: #eed9bd*/
   margin: 0 -0.5em;
   padding-bottom: 2.5em;
 }
@@ -219,7 +229,7 @@ section a:link {
 
 @media (max-width: 530px) {
   .certifications-image {
-    height: 170px;
+    height: 260px;
   }
 }
 
@@ -233,26 +243,132 @@ section a:link {
   text-align: center;
 }
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; /* Center the modal */
+  padding: 0px 30px 30px 30px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 1em;
+  max-height: 55vh;
+  overflow: auto;
+  position: relative;
+}
+
+@media (max-width: 530px) {
+  .modal-content {
+    margin: 25% auto;
+    max-height: 70%;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .modal-content {
+    margin: 25% auto;
+    max-height: 60%;
+    max-width: 60%;
+  }
+}
+
+.modal-content > p {
+  text-align: justify;
+  margin-top: -3px;
+}
+
+.modal-image {
+  width: 100%; /* Make image responsive to modal width */
+  max-width: 500px; /* Max width for the image */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 20px auto; /* Center the image horizontally and give it some space */
+}
+
+.image-slider {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden; /* Hide images that are outside of the visible area */
+}
+
+.slides {
+  display: flex; /* Arrange images horizontally */
+  transition: transform 1s ease-in-out; /* Smooth sliding transition */
+}
+
+.slide {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #307c91; /* Button color */
+  color: white; /* Text color */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 0.5em; /* Rounded corners */
+  font-size: 0.9em;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  font-family: 'Lexend', sans-serif;
+  font-weight: lighter;
+}
+
+.button:hover {
+  background-color: #1c4651; /* Darker color when hovered */
+  letter-spacing: 0px;
+}
+
+.close {
+  position: sticky;
+  top: 0;
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  padding-top: 20px;
+  z-index: 10; 
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #arts {
   background-color: #fae3d9;
   margin: 0 -0.5em;
   padding-bottom: 2.5em;
 }
 
-.flexes {
+.flexes-contacts {
   display: grid;
   text-align: justify;
   margin-left: 13em;
 }
 
 @media (max-width: 800px) {
-  .flexes {
+  .flexes-contacts {
     text-align: center;
     margin: 0;
   }
 }
 
-.flexes > p {
+.flexes-contacts > p {
   font-size: 1.1em;
   margin-top: -1.5em;
 }
@@ -282,12 +398,20 @@ section a:link {
 
 section a:link {
   text-decoration: none;
+  color: #016b89;
 }
 
-  a:hover {
-   letter-spacing: 1px;
+a:hover {
+  letter-spacing: 1px;
 }
 
+.imagebox {
+  color: #016b89;
+}
+
+.imagebox:hover {
+  letter-spacing: 1px;
+}
 
 .projects-image-first {
   margin-left: auto;
